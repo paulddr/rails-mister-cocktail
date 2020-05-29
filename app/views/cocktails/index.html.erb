@@ -1,0 +1,27 @@
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Mister Cocktail <strong>Allow you</strong> to <strong>create the best recipe </strong></h1>
+    <h1>of your favorite cocktails</h1>
+    <button  class='pulse' ><%= link_to 'Add cocktail', new_cocktail_path%></button>
+  </div>
+</div>
+
+<h1>Cocktails</h1>
+
+<div class="container">
+  <% @cocktails.each do |cocktail| %>
+  <%= link_to cocktail_path(cocktail.id) do %>
+  <div class='card-product mb-4'>
+  <img src='https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg' />
+  <div class='card-product-infos'>
+    <h2 class=" pulse"><%= cocktail.name.capitalize %></h2>
+  </div>
+</div>
+<% end %>
+  <% end %>
+
+  <button  class='pulse' ><%= link_to 'Add cocktail', new_cocktail_path%></button>
+</div>
+
