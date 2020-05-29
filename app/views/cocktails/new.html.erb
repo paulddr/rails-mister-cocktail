@@ -1,20 +1,29 @@
 
-<br>
-
-<div class="container">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-
-        <%= simple_form_for @cocktail do |f| -%>
-          <div class="form-group"><%= f.label :name %></div>
-          <div class="form-group"><%= f.text_field :name%></div>
-          <%= f.submit %>
-        <% end -%>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <p>Mister Cocktail</p>
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
-        <button  class='pulse' ><%= link_to 'Back', cocktails_path%></button>
-       </div>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+
+        <a class="nav-link" href="/cocktails"><i class="fas fa-home pulse"></i></a>
+      </li>
+
+    </ul>
   </div>
 </div>
+
+
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
+ <%= f.submit "Submit", class: "btn btn-outline-primary" %>
+<% end %>
+
+

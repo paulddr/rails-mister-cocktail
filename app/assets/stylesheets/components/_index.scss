@@ -16,7 +16,7 @@
 }
 .fa-home{
 
-  color: #EF6EAE;
+  color: black;
 }
 .card-product img {
   height: 100%;
@@ -66,7 +66,7 @@
 // If you wonder why use Sass vars or CSS custom properties...
   // Make a map with the class names and matching colors
 $colors: (
-  pulse: #ef6eae,
+  pulse: black,
 
 );
 
@@ -86,14 +86,14 @@ button {
 }
   a{
     text-decoration:none !important;
-    color:#ef6eae;
+    color:black;
     &:hover{
-      color:#ef6eae;
+      color:black;
     }
 
   h2{
     text-decoration:none !important;
-    color:#ef6eae;
+    color:black;
     &:hover{
       color:#ef6eae;
 
@@ -102,7 +102,7 @@ button {
   &:hover,
   &:focus {
     border-color: var(--hover);
-    color: #fff;
+    color: black;
 
   }
 }
@@ -132,23 +132,26 @@ div{
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  padding: 80px 0;
+  position: relative;
+}
+
+#banner {
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
 }
 
 .banner h1 {
-  margin: 0;
+  margin-left: 10%;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
 }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
+
 
 .btn-flat {
   color: white;
@@ -163,3 +166,107 @@ div{
   color: white;
 }
 
+#cocktail{
+  padding: 0px;
+  position:absolute;
+  margin-top: -50px;
+  margin-left: -100px;
+  font-size: 70px;
+  color: white;
+
+}
+
+main {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  background: linear-gradient(to bottom, #000, #000 60%, #fff 60%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  transition: background 0.2s ease-out;
+  white-space: nowrap;
+}
+
+
+
+span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: #000;
+  bottom: 9px;
+  transition: all 0.2s ease-out;
+}
+
+p:hover {
+  background-position: 0 11px;
+}
+
+span:hover:before {
+  transform: translateY(10px)
+}
+
+#ban_text{
+  padding-top: 200px;
+}
+
+.form{
+  display:block;
+}
+
+#new_cocktail{
+  width: 100%;
+  background-image: url(https://res.cloudinary.com/dos4x9flk/image/upload/v1590762039/photo-of-glasses-on-wooden-tray-4051401_d5dzes.jpg);
+  background-size: cover;
+  padding: 5%;
+}
+
+#new_dose{
+  width: 100%;
+  background-image: url(https://res.cloudinary.com/dos4x9flk/image/upload/v1590762039/photo-of-glasses-on-wooden-tray-4051401_d5dzes.jpg);
+  background-size: cover;
+  padding: 5%;
+
+}
+
+.photo{
+  display:flex;
+  flex-direction: row;
+  position: relative;
+
+}
+
+
+#ingredient{
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+
+#yolo{
+
+  transform: translate(-50%, -50%);
+  font-size:120px;
+  letter-spacing:0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow:
+            8px 8px #ff1f8f,
+            20px 20px #000000;
+  padding-left: 300px;
+  padding-top: 100px;
+}

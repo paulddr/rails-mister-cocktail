@@ -1,20 +1,23 @@
 
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dos4x9flk/image/upload/v1590747495/alcoholic-beverages-bar-beverage-cocktail-613037_yk5y8u.jpg);">
   <div class="container">
+    <span id="cocktail"><p>MISTER COCKTAIL</p></span>
+    <div id="ban_text">
     <h1>Mister Cocktail <strong>Allow you</strong> to <strong>create the best recipe </strong></h1>
     <h1>of your favorite cocktails</h1>
-    <button  class='pulse' ><%= link_to 'Add cocktail', new_cocktail_path%></button>
+    </div>
   </div>
 </div>
-
-<h1>Cocktails</h1>
+<main>
+  <p>Cocktails</p>
+</main>
 
 <div class="container">
   <% @cocktails.each do |cocktail| %>
   <%= link_to cocktail_path(cocktail.id) do %>
   <div class='card-product mb-4'>
-  <img src='https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg' />
+  <img src=https://res.cloudinary.com/dos4x9flk/image/upload/c_scale,h_120,w_150/v1590748412/Calque_1_ukdgdo.png />
   <div class='card-product-infos'>
     <h2 class=" pulse"><%= cocktail.name.capitalize %></h2>
   </div>
